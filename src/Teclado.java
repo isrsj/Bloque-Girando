@@ -3,9 +3,11 @@ import java.awt.event.KeyListener;
 
 public class Teclado implements KeyListener {
     private Boolean derecha, izquierda;
+    private Boolean inicio;
     public Teclado (){
         derecha = false;
         izquierda = false;
+        inicio = true;
     }
 
     public Boolean getDerecha() {
@@ -22,6 +24,14 @@ public class Teclado implements KeyListener {
 
     public void setIzquierda(Boolean izquierda) {
         this.izquierda = izquierda;
+    }
+
+    public Boolean getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(Boolean inicio) {
+        this.inicio = inicio;
     }
 
     @Override
