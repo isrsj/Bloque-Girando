@@ -1,11 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Panel extends JPanel {
     Figura figura = new Figura ();
+    Teclado teclado = new Teclado ();
+
+    private Timer timer;
     public Panel (){
         this.setLayout(null);
         this.setBackground(Color.BLACK);
+        this.addKeyListener(teclado);
+        this.setFocusable(true);
+        animacion();
+    }
+
+    public void animacion (){
+        timer = new Timer(10, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     @Override
